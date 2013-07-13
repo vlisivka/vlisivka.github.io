@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://vlisivka.github.io/atom.xml" rel="self"/>
   <link href="http://vlisivka.github.io/"/>
-  <updated>2013-07-13T23:50:33+03:00</updated>
+  <updated>2013-07-13T23:57:35+03:00</updated>
   <id>http://vlisivka.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hello Octopress and Github pages]]></title>
+    <link href="http://vlisivka.github.io/blog/2013/07/13/hello-octopress-and-github-pages/"/>
+    <updated>2013-07-13T23:56:00+03:00</updated>
+    <id>http://vlisivka.github.io/blog/2013/07/13/hello-octopress-and-github-pages</id>
+    <content type="html"><![CDATA[<p><em>Test.</em></p>
+]]></content>
+  </entry>
   
 </feed>
