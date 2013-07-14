@@ -2,18 +2,38 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://vlisivka.github.io/blog/2013/07/13/hello-octopress-and-github-pages/</loc>
-        <lastmod>2013-07-13T23:57:12+03:00</lastmod>
+        <lastmod>2013-07-14T17:39:13+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vlisivka.github.io/blog/2013/07/14/test2/</loc>
+        <lastmod>2013-07-14T17:42:30+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vlisivka.github.io/blog/2013/07/14/test3/</loc>
+        <lastmod>2013-07-14T17:42:41+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vlisivka.github.io/blog/2013/07/14/test4/</loc>
+        <lastmod>2013-07-14T17:42:52+03:00</lastmod>
     </url>
     <url>
         <loc>http://vlisivka.github.io/blog/archives/</loc>
-        <lastmod>2013-07-13T23:57:12+03:00</lastmod>
+        <lastmod>2013-07-14T17:42:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vlisivka.github.io/blog/</loc>
+        <lastmod>2013-07-14T17:42:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vlisivka.github.io/archives/</loc>
+        <lastmod>2013-07-14T17:42:52+03:00</lastmod>
     </url>
     <url>
         <loc>http://vlisivka.github.io/</loc>
-        <lastmod>2013-07-13T23:57:12+03:00</lastmod>
+        <lastmod>2013-07-14T17:42:52+03:00</lastmod>
     </url>
     <url>
         <loc>http://vlisivka.github.io/robots.txt</loc>
-        <lastmod>2013-07-13T23:28:50+03:00</lastmod>
+        <lastmod>2013-07-14T17:39:13+03:00</lastmod>
     </url>
 </urlset>
