@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://vlisivka.github.io/sitemap.xml 

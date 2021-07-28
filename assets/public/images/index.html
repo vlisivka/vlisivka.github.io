@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Gallery</title>
+  <meta name="robots" content="noindex,nofollow">
+
+  <!-- For mobile devices -->
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, width=device-width">
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+
+  <!-- nanogallery2 -->
+  <link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css" crossorigin="anonymous">
+  <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="nanogallery2">A gallery made with nanogallery2.</div>
+
+<script>
+   jQuery(document).ready(function () {
+
+      jQuery("#nanogallery2").nanogallery2( {
+          // ### gallery settings ###
+          thumbnailHeight:  150,
+          thumbnailWidth:   150,
+          //itemsBaseURL:     'https://nanogallery2.nanostudio.org/samples/',
+          // ### gallery content ###
+          items: [
+{src: './2020-06-27-page-for-failed-ideas.md.388.png', srct: 'thumbs/./2020-06-27-page-for-failed-ideas.md.388_t.png', title: './2020-06-27-page-for-failed-ideas.md.388.png' },
+{src: './2020-10-17-how_to_chose_right_metric.md.755.png', srct: 'thumbs/./2020-10-17-how_to_chose_right_metric.md.755_t.png', title: './2020-10-17-how_to_chose_right_metric.md.755.png' },
+{src: './2020-09-06-five-star-product.md.5579.png', srct: 'thumbs/./2020-09-06-five-star-product.md.5579_t.png', title: './2020-09-06-five-star-product.md.5579.png' },
+{src: './2020-09-15-how-to-chose-idea.md.3816.png', srct: 'thumbs/./2020-09-15-how-to-chose-idea.md.3816_t.png', title: './2020-09-15-how-to-chose-idea.md.3816.png' },
+            ]
+        });
+    });
+</script>
+</body></html>
