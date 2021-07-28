@@ -11,6 +11,9 @@ const remarkMermaid = require('remark-mermaid-dataurl');
 const remarkGfm = require('remark-gfm');
 const remarkFootnotes = require('remark-footnotes');
 const remarkHighlight = require('remark-highlight.js');
+const { default: remarkEmbedder } = require('@remark-embedder/core');
+const { default: remarkEmbedderOembedTransformer } = require('@remark-embedder/transformer-oembed');
+const { default: remarkEmbedderCache } = require('@remark-embedder/cache');
 const remark2rehype = require('remark-rehype');
 const rehypeMathJax = require('rehype-mathjax');
 const rehypeToc = require("@jsdevtools/rehype-toc");
@@ -50,6 +53,7 @@ module.exports = {
         remarkHighlight,
         remarkGfm,
         remarkFootnotes,
+        [remarkEmbedder, {remarkEmbedderCache, transformers: [ [remarkEmbedderOembedTransformer, { params: {maxwidth: 640, maxheight: 480} } ] ] } ],
         remarkSlug,
         [remarkHtml, {sanitize: false}],
         remarkMath,

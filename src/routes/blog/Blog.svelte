@@ -48,7 +48,7 @@
 </style>
 
 <svelte:head>
-  <title>Fail Fast: {frontmatter.title}</title>
+  <title>Блог В. Лісівки: {frontmatter.title}</title>
   <meta name="description" content={frontmatter.excerpt} />
   <link href={request.permalink} rel="canonical" />
 </svelte:head>
