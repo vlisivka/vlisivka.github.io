@@ -68,7 +68,7 @@
     "remark-mermaid-dataurl": "^1.0.2",
     "remark-rehype": "^8.1.0",
     "rollup": "^2.41.1",
-    "svelte-chota": "^1.8.4"
+    "svelte-chota": "^1.8.6"
   },
   "author": "Nick Reese",
   "license": "MIT",
