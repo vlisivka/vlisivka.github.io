@@ -18,6 +18,17 @@ const remark2rehype = require('remark-rehype');
 const rehypeMathJax = require('rehype-mathjax');
 const rehypeToc = require("@jsdevtools/rehype-toc");
 const rehypeStringify = require('rehype-stringify');
+const escapeHtml = require('escape-html')
+
+function handleTransformerError({error, url, transformer}) {
+  console.log('Error in transformer:', transformer.name, url, error);
+
+  const escaped_error = escapeHtml(error.toString());
+  const escaped_url = escapeHtml(url);
+
+  return `<p style="color:red">Не можу вбудувати URL <a href="${escaped_url}">${escaped_url}</a>. <br/>Помилка в трансформері <code>${transformer.name}</code>: <code>${escaped_error}</code></p>`;
+}
+
 
 module.exports = {
   origin: 'https://vlisivka.github.io/', // TODO: update this.
@@ -53,7 +64,14 @@ module.exports = {
         remarkHighlight,
         remarkGfm,
         remarkFootnotes,
-        [remarkEmbedder, {remarkEmbedderCache, transformers: [ [remarkEmbedderOembedTransformer, { params: {maxwidth: 640, maxheight: 480} } ] ] } ],
+        [remarkEmbedder, {
+          remarkEmbedderCache,
+          transformers: [
+            [ remarkEmbedderOembedTransformer, { params: {maxwidth: 640, maxheight: 480} } ],
+          ],
+          handleError: handleTransformerError,
+          }
+        ],
         remarkSlug,
         [remarkHtml, {sanitize: false}],
         remarkMath,
