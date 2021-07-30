@@ -8,6 +8,7 @@ const remarkHtml = require('remark-html');
 const rawHtml = require('rehype-raw');
 const remarkMath = require('remark-math');
 const remarkMermaid = require('remark-mermaid-dataurl');
+const remarkKroki = require('remark-kroki-plugin');
 const remarkGfm = require('remark-gfm');
 const remarkFootnotes = require('remark-footnotes');
 const remarkHighlight = require('remark-highlight.js');
@@ -19,6 +20,7 @@ const rehypeMathJax = require('rehype-mathjax');
 const rehypeToc = require("@jsdevtools/rehype-toc");
 const rehypeStringify = require('rehype-stringify');
 const escapeHtml = require('escape-html')
+
 
 function handleTransformerError({error, url, transformer}) {
   console.log('Error in transformer:', transformer.name, url, error);
@@ -61,6 +63,7 @@ module.exports = {
         remarkFrontmatter,
         [remarkExtractFrontmatter, { name: 'frontmatter', yaml: yaml.parse }],
         remarkMermaid,
+        [remarkKroki, { krokiBase: 'https://kroki.io', lang: "kroki", imgRefDir: "/public/kroki", imgDir: "assets/public/kroki" }],
         remarkHighlight,
         remarkGfm,
         remarkFootnotes,

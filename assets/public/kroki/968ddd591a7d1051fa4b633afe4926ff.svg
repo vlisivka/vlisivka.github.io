@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' class="pikchr" viewBox="0 0 327.47 146.052">
+<ellipse cx="7" cy="16" rx="5.66929" ry="14.1732"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M7,2L279,2"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M7,30L257,30"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M257,30L257,58"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<ellipse cx="30" cy="73" rx="5.66929" ry="14.1732"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M30,58L257,58L257,58L268,87"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+<path d="M30,87L279,87L257,30"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+<ellipse cx="53" cy="129" rx="5.66929" ry="14.1732"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<path d="M53,115L325,115L279,2"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+<path d="M53,143L325,143L325,115"  style="fill:none;stroke-width:2.16;stroke-linejoin:round;stroke:rgb(0,0,0);" />
+</svg>
+
