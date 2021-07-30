@@ -178,6 +178,69 @@ D3: circle same as B3 at B3-(0,2*$laneh) "3"
     arrow from D1 to D3 chop
 ```
 
+```kroki imgType="pikchr"
+scale = 0.8
+fill = white
+linewid *= 0.5
+circle "C0" fit
+circlerad = previous.radius
+arrow
+circle "C1"
+arrow
+circle "C2"
+arrow
+circle "C4"
+arrow
+circle "C6"
+circle "C3" at dist(C2,C4) heading 30 from C2
+arrow
+circle "C5"
+arrow from C2 to C3 chop
+C3P: circle "C3'" at dist(C4,C6) heading 30 from C6
+arrow right from C3P.e
+C5P: circle "C5'"
+arrow from C6 to C3P chop
+
+box height C3.y-C2.y \
+    width (C5P.e.x-C0.w.x)+linewid \
+    with .w at 0.5*linewid west of C0.w \
+    behind C0 \
+    fill 0xc6e2ff thin color gray
+box same width previous.e.x - C2.w.x \
+    with .se at previous.ne \
+    fill 0x9accfc
+"trunk" below at 2nd last box.s
+"feature branch" above at last box.n
+
+circle "C0" at 3.7cm south of C0
+arrow
+circle "C1"
+arrow
+circle "C2"
+arrow
+circle "C4"
+arrow
+circle "C6"
+circle "C3" at dist(C2,C4) heading 30 from C2
+arrow
+circle "C5"
+arrow
+circle "C7"
+arrow from C2 to C3 chop
+arrow from C6 to C7 chop
+
+box height C3.y-C2.y \
+    width (C7.e.x-C0.w.x)+1.5*C1.radius \
+    with .w at 0.5*linewid west of C0.w \
+    behind C0 \
+    fill 0xc6e2ff thin color gray
+box same width previous.e.x - C2.w.x \
+    with .se at previous.ne \
+    fill 0x9accfc
+"trunk" below at 2nd last box.s
+"feature branch" above at last box.n
+```
+
 ## Vega-lite
 
 Редактор: https://vega.github.io/editor/ , приклади: https://vega.github.io/vega-lite/examples/ , https://github.com/aezarebski/vegacookbook .
@@ -795,4 +858,300 @@ skinparam monochrome true
 *** Identify Quick Wins
 ** Complete innovate phase
 @endwbs
+```
+
+
+## C4 PlantUML
+
+Деякі нові функції в C4 PlantUML ще не підтримуються в Kroki, напр. `AddElementTag()`.
+
+```kroki imgType="c4plantuml"
+@startuml "techtribesjs"
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+
+LAYOUT_TOP_DOWN()
+'LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+
+Person_Ext(anonymous_user, "Anonymous User")
+Person(aggregated_user, "Aggregated User")
+Person(administration_user, "Administration User")
+
+System_Boundary(c1, "techtribes.js"){
+    
+    Container(web_app, "Web Application", "Java, Spring MVC, Tomcat 7.x", "Allows users to view people, tribes, content, events, jobs, etc. from the local tech, digital and IT sector")
+
+    ContainerDb(rel_db, "Relational Database", "MySQL 5.5.x", "Stores people, tribes, tribe membership, talks, events, jobs, badges, GitHub repos, etc.")
+
+    Container(filesystem, "File System", "FAT32", "Stores search indexes")
+
+    ContainerDb(nosql, "NoSQL Data Store", "MongoDB 2.2.x", "Stores from RSS/Atom feeds (blog posts) and tweets")
+
+    Container(updater, "Updater", "Java 7 Console App", "Updates profiles, tweets, GitHub repos and content on a scheduled basis")
+}
+
+System_Ext(twitter, "Twitter")
+System_Ext(github, "GitHub")
+System_Ext(blogs, "Blogs")
+
+
+Rel(anonymous_user, web_app, "Uses", "HTTPS")
+Rel(aggregated_user, web_app, "Uses", "HTTPS")
+Rel(administration_user, web_app, "Uses", "HTTPS")
+
+Rel(web_app, rel_db, "Reads from and writes to", "SQL/JDBC, port 3306")
+Rel(web_app, filesystem, "Reads from")
+Rel(web_app, nosql, "Reads from", "MongoDB wire protocol, port 27017")
+
+Rel_U(updater, rel_db, "Reads from and writes data to", "SQL/JDBC, port 3306")
+Rel_U(updater, filesystem, "Writes to")
+Rel_U(updater, nosql, "Reads from and writes to", "MongoDB wire protocol, port 27017")
+
+Rel(updater, twitter, "Gets profile information and tweets from", "HTTPS")
+Rel(updater, github, "Gets information about public code repositories from", "HTTPS")
+Rel(updater, blogs, "Gets content using RSS and Atom feeds from", "HTTP")
+
+Lay_R(rel_db, filesystem)
+
+@enduml
+```
+
+```kroki imgType="c4plantuml"
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+
+' LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+title Container diagram for Internet Banking System
+
+Person(customer, Customer, "A customer of the bank, with personal bank accounts")
+
+System_Boundary(c1, "Internet Banking") {
+    Container(web_app, "Web Application", "Java, Spring MVC", "Delivers the static content and the Internet banking SPA")
+    Container(spa, "Single-Page App", "JavaScript, Angular", "Provides all the Internet banking functionality to cutomers via their web browser")
+    Container(mobile_app, "Mobile App", "C#, Xamarin", "Provides a limited subset of the Internet banking functionality to customers via their mobile device")
+    ContainerDb(database, "Database", "SQL Database", "Stores user registration information, hashed auth credentials, access logs, etc.")
+    Container(backend_api, "API Application", "Java, Docker Container", "Provides Internet banking functionality via API")
+}
+
+System_Ext(email_system, "E-Mail System", "The internal Microsoft Exchange system")
+System_Ext(banking_system, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+
+Rel(customer, web_app, "Uses", "HTTPS")
+Rel(customer, spa, "Uses", "HTTPS")
+Rel(customer, mobile_app, "Uses")
+
+Rel_Neighbor(web_app, spa, "Delivers")
+Rel(spa, backend_api, "Uses", "async, JSON/HTTPS")
+Rel(mobile_app, backend_api, "Uses", "async, JSON/HTTPS")
+Rel_Back_Neighbor(database, backend_api, "Reads from and writes to", "sync, JDBC")
+
+Rel_Back(customer, email_system, "Sends e-mails to")
+Rel_Back(email_system, backend_api, "Sends e-mails using", "sync, SMTP")
+Rel_Neighbor(backend_api, banking_system, "Uses", "sync/async, XML/HTTPS")
+@enduml
+```
+
+```kroki imgType="c4plantuml"
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Dynamic.puml
+
+LAYOUT_WITH_LEGEND()
+
+ContainerDb(c4, "Database", "Relational Database Schema", "Stores user registration information, hashed authentication credentials, access logs, etc.")
+Container(c1, "Single-Page Application", "JavaScript and Angular", "Provides all of the Internet banking functionality to customers via their web browser.")
+Container_Boundary(b, "API Application") {
+  Component(c3, "Security Component", "Spring Bean", "Provides functionality Related to signing in, changing passwords, etc.")
+  Component(c2, "Sign In Controller", "Spring MVC Rest Controller", "Allows users to sign in to the Internet Banking System.")
+}
+Rel_R(c1, c2, "Submits credentials to", "JSON/HTTPS")
+Rel(c2, c3, "Calls isAuthenticated() on")
+Rel_R(c3, c4, "select * from users where username = ?", "JDBC")
+@enduml
+```
+
+## Blockdiag
+
+```kroki imgType="blockdiag"
+blockdiag {
+  default_node_color = lightyellow;
+  default_group_color = lightgreen;
+  default_linecolor = magenta;
+  default_textcolor = red;
+  default_shape = roundedbox;
+
+  // Set span metrix
+  span_width = 90;  // default value is 64
+  span_height = 60;  // default value is 40
+  node_height = 100;  // default value is 40
+
+  A -> B -> C;
+       B -> D[label = "смітник", style="dotted", textcolor="red", fontsize = 7];
+  group {
+    C; D;
+  }
+
+  B [style = dotted];
+  C [style = dashed];
+  D [style = "3,3,3,3,15,3"];
+
+  B [color = none];
+  C [color = pink];
+  D [color = "#888888"];
+  A [numbered = 20, label = "Сировина", description = "Інгридієнти", stacked];
+  B [numbered = 4, label = "Обробка", description = "Багато обробки"];
+  C [numbered = "A+", label = "Продукт", description = "Щось смачненьке", stacked];
+  D [numbered = "C-", label = "Відходи", description = "Всілякий непотреб", stacked];
+}
+```
+
+```kroki imgType="blockdiag"
+blockdiag {
+   // standard node shapes
+   box [shape = "box"];
+   roundedbox [shape = "roundedbox"];
+   diamond [shape = "diamond"];
+   ellipse [shape = "ellipse"];
+   note [shape = "note"];
+
+   cloud [shape = "cloud"];
+   mail [shape = "mail", stacked];
+   beginpoint [shape = "beginpoint"];
+   endpoint [shape = "endpoint"];
+   minidiamond [shape = "minidiamond"];
+   actor [shape = "actor"];
+   dots [shape = "dots"];
+
+   box -> roundedbox -> diamond -> ellipse;
+   cloud -> note -> mail -> actor;
+   minidiamond -> beginpoint -> endpoint -> dots;
+
+   // node shapes for flowcharts
+   condition [shape = "flowchart.condition"];
+   database [shape = "flowchart.database"];
+   input [shape = "flowchart.input"];
+   loopin [shape = "flowchart.loopin"];
+   loopout [shape = "flowchart.loopout"];
+   terminator [shape = "flowchart.terminator"];
+
+   condition -> database -> terminator -> input;
+   loopin -> loopout;
+}
+```
+
+
+## Graphviz
+
+```kroki imgType="graphviz"
+digraph "unix" {
+  graph [ fontname = "Helvetica-Oblique",
+          fontsize = 36,
+          label = "\n\n\n\nObject Oriented Graphs\nStephen North, 3/19/93",
+          size = "6,6" ];
+  node [ shape = polygon,
+         sides = 4,
+         distortion = "0.0",
+         orientation = "0.0",
+         skew = "0.0",
+         color = white,
+         style = filled,
+         fontname = "Helvetica-Outline" ];
+  "5th Edition" [sides=9, distortion="0.936354", orientation=28, skew="-0.126818", color=salmon2];
+  "6th Edition" [sides=5, distortion="0.238792", orientation=11, skew="0.995935", color=deepskyblue];
+  "PWB 1.0" [sides=8, distortion="0.019636", orientation=79, skew="-0.440424", color=goldenrod2];
+  LSX [sides=9, distortion="-0.698271", orientation=22, skew="-0.195492", color=burlywood2];
+  "1 BSD" [sides=7, distortion="0.265084", orientation=26, skew="0.403659", color=gold1];
+  "Mini Unix" [distortion="0.039386", orientation=2, skew="-0.461120", color=greenyellow];
+  Wollongong [sides=5, distortion="0.228564", orientation=63, skew="-0.062846", color=darkseagreen];
+  Interdata [distortion="0.624013", orientation=56, skew="0.101396", color=dodgerblue1];
+  "Unix/TS 3.0" [sides=8, distortion="0.731383", orientation=43, skew="-0.824612", color=thistle2];
+  "PWB 2.0" [sides=6, distortion="0.592100", orientation=34, skew="-0.719269", color=darkolivegreen3];
+  "7th Edition" [sides=10, distortion="0.298417", orientation=65, skew="0.310367", color=chocolate];
+  "8th Edition" [distortion="-0.997093", orientation=50, skew="-0.061117", color=turquoise3];
+  "32V" [sides=7, distortion="0.878516", orientation=19, skew="0.592905", color=steelblue3];
+  V7M [sides=10, distortion="-0.960249", orientation=32, skew="0.460424", color=navy];
+  "Ultrix-11" [sides=10, distortion="-0.633186", orientation=10, skew="0.333125", color=darkseagreen4];
+  Xenix [sides=8, distortion="-0.337997", orientation=52, skew="-0.760726", color=coral];
+  "UniPlus+" [sides=7, distortion="0.788483", orientation=39, skew="-0.526284", color=darkolivegreen3];
+  "9th Edition" [sides=7, distortion="0.138690", orientation=55, skew="0.554049", color=coral3];
+  "2 BSD" [sides=7, distortion="-0.010661", orientation=84, skew="0.179249", color=blanchedalmond];
+  "2.8 BSD" [distortion="-0.239422", orientation=44, skew="0.053841", color=lightskyblue1];
+  "2.9 BSD" [distortion="-0.843381", orientation=70, skew="-0.601395", color=aquamarine2];
+  "3 BSD" [sides=10, distortion="0.251820", orientation=18, skew="-0.530618", color=lemonchiffon];
+  "4 BSD" [sides=5, distortion="-0.772300", orientation=24, skew="-0.028475", color=darkorange1];
+  "4.1 BSD" [distortion="-0.226170", orientation=38, skew="0.504053", color=lightyellow1];
+  "4.2 BSD" [sides=10, distortion="-0.807349", orientation=50, skew="-0.908842", color=darkorchid4];
+  "4.3 BSD" [sides=10, distortion="-0.030619", orientation=76, skew="0.985021", color=lemonchiffon2];
+  "Ultrix-32" [distortion="-0.644209", orientation=21, skew="0.307836", color=goldenrod3];
+  "PWB 1.2" [sides=7, distortion="0.640971", orientation=84, skew="-0.768455", color=cyan];
+  "USG 1.0" [distortion="0.758942", orientation=42, skew="0.039886", color=blue];
+  "CB Unix 1" [sides=9, distortion="-0.348692", orientation=42, skew="0.767058", color=firebrick];
+  "USG 2.0" [distortion="0.748625", orientation=74, skew="-0.647656", color=chartreuse4];
+  "CB Unix 2" [sides=10, distortion="0.851818", orientation=32, skew="-0.020120", color=greenyellow];
+  "CB Unix 3" [sides=10, distortion="0.992237", orientation=29, skew="0.256102", color=bisque4];
+  "Unix/TS++" [sides=6, distortion="0.545461", orientation=16, skew="0.313589", color=mistyrose2];
+  "PDP-11 Sys V" [sides=9, distortion="-0.267769", orientation=40, skew="0.271226", color=cadetblue1];
+  "USG 3.0" [distortion="-0.848455", orientation=44, skew="0.267152", color=bisque2];
+  "Unix/TS 1.0" [distortion="0.305594", orientation=75, skew="0.070516", color=orangered];
+  "TS 4.0" [sides=10, distortion="-0.641701", orientation=50, skew="-0.952502", color=crimson];
+  "System V.0" [sides=9, distortion="0.021556", orientation=26, skew="-0.729938", color=darkorange1];
+  "System V.2" [sides=6, distortion="0.985153", orientation=33, skew="-0.399752", color=darkolivegreen4];
+  "System V.3" [sides=7, distortion="-0.687574", orientation=58, skew="-0.180116", color=lightsteelblue1];
+  "5th Edition" -> "6th Edition";
+  "5th Edition" -> "PWB 1.0";
+  "6th Edition" -> LSX;
+  "6th Edition" -> "1 BSD";
+  "6th Edition" -> "Mini Unix";
+  "6th Edition" -> Wollongong;
+  "6th Edition" -> Interdata;
+  Interdata -> "Unix/TS 3.0";
+  Interdata -> "PWB 2.0";
+  Interdata -> "7th Edition";
+  "7th Edition" -> "8th Edition";
+  "7th Edition" -> "32V";
+  "7th Edition" -> V7M;
+  "7th Edition" -> "Ultrix-11";
+  "7th Edition" -> Xenix;
+  "7th Edition" -> "UniPlus+";
+  V7M -> "Ultrix-11";
+  "8th Edition" -> "9th Edition";
+  "1 BSD" -> "2 BSD";
+  "2 BSD" -> "2.8 BSD";
+  "2.8 BSD" -> "Ultrix-11";
+  "2.8 BSD" -> "2.9 BSD";
+  "32V" -> "3 BSD";
+  "3 BSD" -> "4 BSD";
+  "4 BSD" -> "4.1 BSD";
+  "4.1 BSD" -> "4.2 BSD";
+  "4.1 BSD" -> "2.8 BSD";
+  "4.1 BSD" -> "8th Edition";
+  "4.2 BSD" -> "4.3 BSD";
+  "4.2 BSD" -> "Ultrix-32";
+  "PWB 1.0" -> "PWB 1.2";
+  "PWB 1.0" -> "USG 1.0";
+  "PWB 1.2" -> "PWB 2.0";
+  "USG 1.0" -> "CB Unix 1";
+  "USG 1.0" -> "USG 2.0";
+  "CB Unix 1" -> "CB Unix 2";
+  "CB Unix 2" -> "CB Unix 3";
+  "CB Unix 3" -> "Unix/TS++";
+  "CB Unix 3" -> "PDP-11 Sys V";
+  "USG 2.0" -> "USG 3.0";
+  "USG 3.0" -> "Unix/TS 3.0";
+  "PWB 2.0" -> "Unix/TS 3.0";
+  "Unix/TS 1.0" -> "Unix/TS 3.0";
+  "Unix/TS 3.0" -> "TS 4.0";
+  "Unix/TS++" -> "TS 4.0";
+  "CB Unix 3" -> "TS 4.0";
+  "TS 4.0" -> "System V.0";
+  "System V.0" -> "System V.2";
+  "System V.2" -> "System V.3";
+}
 ```

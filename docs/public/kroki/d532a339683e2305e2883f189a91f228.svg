@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink" width="640px" height="200px">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>blockdiag {
+  default_node_color = lightyellow;
+  default_group_color = lightgreen;
+  default_linecolor = magenta;
+  default_textcolor = red;
+  default_shape = roundedbox;
+
+
+  A -&gt; B -&gt; C;
+       B -&gt; D [label = "на смітник", textcolor="red"];
+  group {
+    C; D;
+  }
+
+  B [style = dotted];
+  C [style = dashed];
+  D [style = "3,3,3,3,15,3"];
+
+  B [color = none];
+  C [color = pink];
+  D [color = "#888888"];
+
+  A [numbered = "Є", label = "Вхід", description = "Інгридієнти", stacked];
+  B [numbered = "99", label = "Обробка", description = "Багато обробки"];
+  C [numbered = "А+", label = "Продукт", description = "Щось смачненьке", stacked];
+  D [numbered = "C-", label = "Відходи", description = "Всілякий непотреб", stacked];
+
+}</desc>
+  <rect fill="rgb(144,238,144)" height="140" style="filter:url(#filter_blur)" width="144" x="440" y="30" />
+  <path d="M 83 54 L 195 54 A8,8 0 0 1 203 62 L 203 86 A8,8 0 0 1 195 94 L 83 94 A8,8 0 0 1 75 86 L 75 62 A8,8 0 0 1 83 54" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 79 50 L 191 50 A8,8 0 0 1 199 58 L 199 82 A8,8 0 0 1 191 90 L 79 90 A8,8 0 0 1 71 82 L 71 58 A8,8 0 0 1 79 50" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 75 46 L 187 46 A8,8 0 0 1 195 54 L 195 78 A8,8 0 0 1 187 86 L 75 86 A8,8 0 0 1 67 78 L 67 54 A8,8 0 0 1 75 46" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 467 54 L 579 54 A8,8 0 0 1 587 62 L 587 86 A8,8 0 0 1 579 94 L 467 94 A8,8 0 0 1 459 86 L 459 62 A8,8 0 0 1 467 54" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 463 50 L 575 50 A8,8 0 0 1 583 58 L 583 82 A8,8 0 0 1 575 90 L 463 90 A8,8 0 0 1 455 82 L 455 58 A8,8 0 0 1 463 50" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 459 46 L 571 46 A8,8 0 0 1 579 54 L 579 78 A8,8 0 0 1 571 86 L 459 86 A8,8 0 0 1 451 78 L 451 54 A8,8 0 0 1 459 46" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 467 134 L 579 134 A8,8 0 0 1 587 142 L 587 166 A8,8 0 0 1 579 174 L 467 174 A8,8 0 0 1 459 166 L 459 142 A8,8 0 0 1 467 134" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 463 130 L 575 130 A8,8 0 0 1 583 138 L 583 162 A8,8 0 0 1 575 170 L 463 170 A8,8 0 0 1 455 162 L 455 138 A8,8 0 0 1 463 130" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 459 126 L 571 126 A8,8 0 0 1 579 134 L 579 158 A8,8 0 0 1 571 166 L 459 166 A8,8 0 0 1 451 158 L 451 134 A8,8 0 0 1 459 126" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 80 48 L 192 48 A8,8 0 0 1 200 56 L 200 80 A8,8 0 0 1 192 88 L 80 88 A8,8 0 0 1 72 80 L 72 56 A8,8 0 0 1 80 48" fill="rgb(255,255,224)" stroke="rgb(255,0,255)" />
+  <ellipse cx="72" cy="48" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="7" x="72.5" y="54">Є</text>
+  <path d="M 76 44 L 188 44 A8,8 0 0 1 196 52 L 196 76 A8,8 0 0 1 188 84 L 76 84 A8,8 0 0 1 68 76 L 68 52 A8,8 0 0 1 76 44" fill="rgb(255,255,224)" stroke="rgb(255,0,255)" />
+  <ellipse cx="68" cy="44" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="7" x="68.5" y="50">Є</text>
+  <path d="M 72 40 L 184 40 A8,8 0 0 1 192 48 L 192 72 A8,8 0 0 1 184 80 L 72 80 A8,8 0 0 1 64 72 L 64 48 A8,8 0 0 1 72 40" fill="rgb(255,255,224)" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="128.0" y="66">Вхід</text>
+  <ellipse cx="64" cy="40" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="7" x="64.5" y="46">Є</text>
+  <path d="M 264 40 L 376 40 A8,8 0 0 1 384 48 L 384 72 A8,8 0 0 1 376 80 L 264 80 A8,8 0 0 1 256 72 L 256 48 A8,8 0 0 1 264 40" fill="none" stroke="rgb(255,0,255)" stroke-dasharray="2" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="77" x="320.5" y="66">Обробка</text>
+  <ellipse cx="256" cy="40" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="13" x="256.5" y="46">99</text>
+  <path d="M 464 48 L 576 48 A8,8 0 0 1 584 56 L 584 80 A8,8 0 0 1 576 88 L 464 88 A8,8 0 0 1 456 80 L 456 56 A8,8 0 0 1 464 48" fill="rgb(255,192,203)" stroke="rgb(255,0,255)" stroke-dasharray="4" />
+  <ellipse cx="456" cy="48" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="18" x="456.0" y="54">А+</text>
+  <path d="M 460 44 L 572 44 A8,8 0 0 1 580 52 L 580 76 A8,8 0 0 1 572 84 L 460 84 A8,8 0 0 1 452 76 L 452 52 A8,8 0 0 1 460 44" fill="rgb(255,192,203)" stroke="rgb(255,0,255)" stroke-dasharray="4" />
+  <ellipse cx="452" cy="44" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="18" x="452.0" y="50">А+</text>
+  <path d="M 456 40 L 568 40 A8,8 0 0 1 576 48 L 576 72 A8,8 0 0 1 568 80 L 456 80 A8,8 0 0 1 448 72 L 448 48 A8,8 0 0 1 456 40" fill="rgb(255,192,203)" stroke="rgb(255,0,255)" stroke-dasharray="4" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="77" x="512.5" y="66">Продукт</text>
+  <ellipse cx="448" cy="40" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="18" x="448.0" y="46">А+</text>
+  <path d="M 464 128 L 576 128 A8,8 0 0 1 584 136 L 584 160 A8,8 0 0 1 576 168 L 464 168 A8,8 0 0 1 456 160 L 456 136 A8,8 0 0 1 464 128" fill="rgb(136,136,136)" stroke="rgb(255,0,255)" stroke-dasharray="3 3 3 3 15 3" />
+  <ellipse cx="456" cy="128" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="13" x="456.5" y="134">C-</text>
+  <path d="M 460 124 L 572 124 A8,8 0 0 1 580 132 L 580 156 A8,8 0 0 1 572 164 L 460 164 A8,8 0 0 1 452 156 L 452 132 A8,8 0 0 1 460 124" fill="rgb(136,136,136)" stroke="rgb(255,0,255)" stroke-dasharray="3 3 3 3 15 3" />
+  <ellipse cx="452" cy="124" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="13" x="452.5" y="130">C-</text>
+  <path d="M 456 120 L 568 120 A8,8 0 0 1 576 128 L 576 152 A8,8 0 0 1 568 160 L 456 160 A8,8 0 0 1 448 152 L 448 128 A8,8 0 0 1 456 120" fill="rgb(136,136,136)" stroke="rgb(255,0,255)" stroke-dasharray="3 3 3 3 15 3" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="73" x="512.5" y="146">Відходи</text>
+  <ellipse cx="448" cy="120" fill="pink" rx="12.0" ry="12.0" stroke="rgb(255,0,255)" />
+  <text fill="rgb(255,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="13" x="448.5" y="126">C-</text>
+  <path d="M 200 60 L 248 60" fill="none" stroke="rgb(255,0,255)" />
+  <polygon fill="rgb(255,0,255)" points="255,60 248,56 248,64 255,60" stroke="rgb(255,0,255)" />
+  <path d="M 384 60 L 440 60" fill="none" stroke="rgb(255,0,255)" />
+  <polygon fill="rgb(255,0,255)" points="447,60 440,56 440,64 447,60" stroke="rgb(255,0,255)" />
+  <path d="M 384 60 L 416 60" fill="none" stroke="rgb(255,0,255)" />
+  <path d="M 416 60 L 416 140" fill="none" stroke="rgb(255,0,255)" />
+  <path d="M 416 140 L 440 140" fill="none" stroke="rgb(255,0,255)" />
+  <polygon fill="rgb(255,0,255)" points="447,140 440,136 440,144 447,140" stroke="rgb(255,0,255)" />
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="63" x="385" y="118" />
+  <text fill="red" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="416.5" y="131">на ...</text>
+</svg>

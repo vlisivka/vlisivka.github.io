@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 832 440" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink" width="832px" height="440px">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>blockdiag {
+   // standard node shapes
+   box [shape = "box"];
+   roundedbox [shape = "roundedbox"];
+   diamond [shape = "diamond"];
+   ellipse [shape = "ellipse"];
+   note [shape = "note"];
+
+   cloud [shape = "cloud"];
+   mail [shape = "mail"];
+   beginpoint [shape = "beginpoint"];
+   endpoint [shape = "endpoint"];
+   minidiamond [shape = "minidiamond"];
+   actor [shape = "actor"];
+   dots [shape = "dots"];
+
+   box -&gt; roundedbox -&gt; diamond -&gt; ellipse;
+   cloud -&gt; note -&gt; mail -&gt; actor;
+   minidiamond -&gt; beginpoint -&gt; endpoint -&gt; dots;
+
+   // node shapes for flowcharts
+   condition [shape = "flowchart.condition"];
+   database [shape = "flowchart.database"];
+   input [shape = "flowchart.input"];
+   loopin [shape = "flowchart.loopin"];
+   loopout [shape = "flowchart.loopout"];
+   terminator [shape = "flowchart.terminator"];
+
+   condition -&gt; database -&gt; terminator -&gt; input;
+   loopin -&gt; loopout;
+}</desc>
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="67" y="46" />
+  <path d="M 267 46 L 379 46 A8,8 0 0 1 387 54 L 387 78 A8,8 0 0 1 379 86 L 267 86 A8,8 0 0 1 259 78 L 259 54 A8,8 0 0 1 267 46" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="515,38 587,66 515,94 443,66 515,38" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <ellipse cx="707" cy="66" fill="rgb(0,0,0)" rx="64.0" ry="20.0" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="259,126 371,126 387,142 387,166 259,166 259,126" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 87 142 A20,8 0 0 1 107 134 A20,6 0 0 1 157 134 A20,8 0 0 1 177 142 A20,8 0 0 1 177 158 A20,20 0 0 1 147 158 A20,20 0 0 1 117 158 A20,20 0 0 1 87 158 A20,8 0 0 1 87 142" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="126" />
+  <ellipse cx="323" cy="226" fill="rgb(0,0,0)" rx="8.0" ry="8.0" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <ellipse cx="515" cy="226" fill="rgb(0,0,0)" rx="8.0" ry="8.0" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="131,218 139,226 131,234 123,226 131,218" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="709,140 709,143 719,143 719,146 709,146 709,149 717,158 713,158 707,152 701,158 697,158 705,149 705,146 695,146 695,143 705,143 705,140" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <ellipse cx="707" cy="137" fill="rgb(0,0,0)" rx="4.0" ry="4.0" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="131,278 203,306 131,334 59,306 131,278" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 259 294 A64,8 0 0 1 387 294 L 387 318 A64,8 0 0 1 259 318 L 259 294" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="667,286 771,286 747,326 643,326 667,286" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="99,366 163,366 195,376 195,406 67,406 67,376 99,366" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <polygon fill="rgb(0,0,0)" points="259,366 387,366 387,396 355,406 291,406 259,396 259,366" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 467 286 L 563 286 A16,20.0 0 0 1 563 326 L 467 326 A16,20.0 0 0 1 467 286" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="19" x="128.5" y="66">box</text>
+  <path d="M 264 40 L 376 40 A8,8 0 0 1 384 48 L 384 72 A8,8 0 0 1 376 80 L 264 80 A8,8 0 0 1 256 72 L 256 48 A8,8 0 0 1 264 40" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="61" x="320.5" y="66">roundedbox</text>
+  <polygon fill="rgb(255,255,255)" points="512,32 584,60 512,88 440,60 512,32" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="43" x="512.5" y="66">diamond</text>
+  <ellipse cx="704" cy="60" fill="rgb(255,255,255)" rx="64.0" ry="20.0" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="43" x="704.5" y="66">ellipse</text>
+  <polygon fill="rgb(255,255,255)" points="256,120 368,120 384,136 384,160 256,160 256,120" stroke="rgb(0,0,0)" />
+  <path d="M 368 120 L 368 136" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 368 136 L 384 136" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="25" x="320.5" y="146">note</text>
+  <path d="M 84 136 A20,8 0 0 1 104 128 A20,6 0 0 1 154 128 A20,8 0 0 1 174 136 A20,8 0 0 1 174 152 A20,20 0 0 1 144 152 A20,20 0 0 1 114 152 A20,20 0 0 1 84 152 A20,8 0 0 1 84 136" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="31" x="129.5" y="146">cloud</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="120" />
+  <path d="M 448 120 L 512 136" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 512 136 L 576 120" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="25" x="512.5" y="154">mail</text>
+  <ellipse cx="320" cy="220" fill="rgb(0,0,0)" rx="8.0" ry="8.0" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="61" x="358.5" y="216">beginpoint</text>
+  <ellipse cx="512" cy="220" fill="white" rx="8.0" ry="8.0" stroke="rgb(0,0,0)" />
+  <ellipse cx="512.0" cy="220.0" fill="rgb(0,0,0)" rx="4.0" ry="4.0" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="49" x="544.5" y="216">endpoint</text>
+  <polygon fill="rgb(255,255,255)" points="128,212 136,220 128,228 120,220 128,212" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="61" x="166.5" y="216">minidi ...</text>
+  <polygon fill="rgb(255,255,255)" points="706,134 706,137 716,137 716,140 706,140 706,143 714,152 710,152 704,146 698,152 694,152 702,143 702,140 692,140 692,137 702,137 702,134" stroke="rgb(0,0,0)" />
+  <ellipse cx="704" cy="131" fill="rgb(255,255,255)" rx="4.0" ry="4.0" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="31" x="704.5" y="165">actor</text>
+  <ellipse cx="704.0" cy="220.0" fill="rgb(0,0,0)" rx="4.0" ry="4.0" stroke="rgb(0,0,0)" />
+  <ellipse cx="704.0" cy="200.0" fill="rgb(0,0,0)" rx="4.0" ry="4.0" stroke="rgb(0,0,0)" />
+  <ellipse cx="704.0" cy="240.0" fill="rgb(0,0,0)" rx="4.0" ry="4.0" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(255,255,255)" points="128,272 200,300 128,328 56,300 128,272" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="55" x="128.5" y="306">condition</text>
+  <path d="M 256 288 A64,8 0 0 1 384 288 L 384 312 A64,8 0 0 1 256 312 L 256 288" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <path d="M 384 288 A64,8 0 0 1 256 288" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="49" x="320.5" y="310">database</text>
+  <polygon fill="rgb(255,255,255)" points="664,280 768,280 744,320 640,320 664,280" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="31" x="704.5" y="306">input</text>
+  <polygon fill="rgb(255,255,255)" points="96,360 160,360 192,370 192,400 64,400 64,370 96,360" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="37" x="128.5" y="391">loopin</text>
+  <polygon fill="rgb(255,255,255)" points="256,360 384,360 384,390 352,400 288,400 256,390 256,360" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="43" x="320.5" y="381">loopout</text>
+  <path d="M 464 280 L 560 280 A16,20.0 0 0 1 560 320 L 464 320 A16,20.0 0 0 1 464 280" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="61" x="512.5" y="306">terminator</text>
+  <path d="M 192 60 L 248 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="255,60 248,56 248,64 255,60" stroke="rgb(0,0,0)" />
+  <path d="M 384 60 L 432 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="439,60 432,56 432,64 439,60" stroke="rgb(0,0,0)" />
+  <path d="M 584 60 L 632 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="639,60 632,56 632,64 639,60" stroke="rgb(0,0,0)" />
+  <path d="M 384 140 L 440 140" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="447,140 440,136 440,144 447,140" stroke="rgb(0,0,0)" />
+  <path d="M 192 140 L 248 140" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="255,140 248,136 248,144 255,140" stroke="rgb(0,0,0)" />
+  <path d="M 576 140 L 684 140" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="691,140 684,136 684,144 691,140" stroke="rgb(0,0,0)" />
+  <path d="M 328 220 L 496 220" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="503,220 496,216 496,224 503,220" stroke="rgb(0,0,0)" />
+  <path d="M 520 220 L 632 220" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="639,220 632,216 632,224 639,220" stroke="rgb(0,0,0)" />
+  <path d="M 136 220 L 304 220" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="311,220 304,216 304,224 311,220" stroke="rgb(0,0,0)" />
+  <path d="M 200 300 L 248 300" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="255,300 248,296 248,304 255,300" stroke="rgb(0,0,0)" />
+  <path d="M 384 300 L 440 300" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="447,300 440,296 440,304 447,300" stroke="rgb(0,0,0)" />
+  <path d="M 192 380 L 248 380" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="255,380 248,376 248,384 255,380" stroke="rgb(0,0,0)" />
+  <path d="M 576 300 L 632 300" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="639,300 632,296 632,304 639,300" stroke="rgb(0,0,0)" />
+</svg>
