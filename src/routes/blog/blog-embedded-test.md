@@ -19,9 +19,9 @@ https://www.youtube.com/watch?v=5D4YVRdeGzs
 https://twitter.com/lviv1256/status/1307545411410972672
 
 
-GfyCat не працює: сайт повертає помилку на етапі генерації сторінки, що валить elder.js, хоча тут показується нормально: https://oembed.link/https://gfycat.com/conventionalagreeablejaeger:
+GfyCat не працює: сайт повертає помилку на етапі генерації сторінки, хоча тут показується нормально: https://oembed.link/https://gfycat.com/conventionalagreeablejaeger:
 
-https://gfycat.com/uk/conventionalagreeablejaeger-wake-up-cat
+    https://gfycat.com/uk/conventionalagreeablejaeger-wake-up-cat
 
 
 FaceBook не працює, бо вже не підпадає під маску `"https://www.facebook.com/*/posts/*"`:
@@ -54,9 +54,9 @@ Audiomack:
 https://audiomack.com/rayvanny/song/sweet
 
 
-Vimeo — не працює, elder.js падає тому що не підставляється {format} в URL:
+Vimeo — не працює, плагін падає тому що не підставляється {format} в URL:
 
-https://vimeo.com/66520064
+    https://vimeo.com/66520064
 
 
 DailyMotion:
@@ -64,7 +64,7 @@ DailyMotion:
 https://www.dailymotion.com/video/x82przf
 
 
-Flat:
+Flat - деколи не показується:
 
 https://flat.io/score/60f5ef4a174e920012435499-surge-of-light
 

@@ -9,8 +9,9 @@
 <iframe width="640" height="360" src="https://www.youtube.com/embed/5D4YVRdeGzs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>Твіттер:</p>
 <blockquote class="twitter-tweet" data-width="550"><p lang="uk" dir="ltr">Ранковий Львів о 6:30. Можна почути навіть спів пташок 🕊 і повна відсутність туристів. Тільки поспішаючі на роботу поодинокі люди та спортсмени на пробіжці... <a href="https://t.co/FxRhXBI7E1">pic.twitter.com/FxRhXBI7E1</a></p>— Так люблю той Львів 🇺🇦 (@lviv1256) <a href="https://twitter.com/lviv1256/status/1307545411410972672?ref_src=twsrc%5Etfw">September 20, 2020</a></blockquote>
-<p>GfyCat не працює: сайт повертає помилку на етапі генерації сторінки, що валить elder.js, хоча тут показується нормально: <a href="https://oembed.link/https://gfycat.com/conventionalagreeablejaeger">https://oembed.link/https://gfycat.com/conventionalagreeablejaeger</a>:</p>
-<p style="color:red">Не можу вбудувати URL <a href="https://gfycat.com/uk/conventionalagreeablejaeger-wake-up-cat">https://gfycat.com/uk/conventionalagreeablejaeger-wake-up-cat</a>. <br>Помилка в трансформері <code>@remark-embedder/transformer-oembed</code>: <code>FetchError: invalid json response body at https://api.gfycat.com/v1/oembed?url=https%3A%2F%2Fgfycat.com%2Fuk%2Fconventionalagreeablejaeger-wake-up-cat&#x26;maxwidth=640&#x26;maxheight=480&#x26;format=json reason: Unexpected end of JSON input</code></p>
+<p>GfyCat не працює: сайт повертає помилку на етапі генерації сторінки, хоча тут показується нормально: <a href="https://oembed.link/https://gfycat.com/conventionalagreeablejaeger">https://oembed.link/https://gfycat.com/conventionalagreeablejaeger</a>:</p>
+<pre><code>https://gfycat.com/uk/conventionalagreeablejaeger-wake-up-cat
+</code></pre>
 <p>FaceBook не працює, бо вже не підпадає під маску <code>"https://www.facebook.com/*/posts/*"</code>:</p>
 <p><a href="https://www.facebook.com/groups/lviv.velo/posts/2879577315615505/">https://www.facebook.com/groups/lviv.velo/posts/2879577315615505/</a></p>
 <p>TikTok не показує відео:</p>
@@ -24,11 +25,12 @@
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/pedrocaetano/27432477888/" title="Leiria by night by Pedro Nuno Caetano, on Flickr"><img src="https://live.staticflickr.com/872/27432477888_8236c59e1d_z.jpg" width="640" height="424" alt="Leiria by night"></a>
 <p>Audiomack:</p>
 <iframe src="https://audiomack.com/embed/song/rayvanny/sweet" scrolling="no" width="481" height="252" scrollbars="no" frameborder="0"></iframe>
-<p>Vimeo — не працює, elder.js падає тому що не підставляється {format} в URL:</p>
-<p style="color:red">Не можу вбудувати URL <a href="https://vimeo.com/66520064">https://vimeo.com/66520064</a>. <br>Помилка в трансформері <code>@remark-embedder/transformer-oembed</code>: <code>FetchError: invalid json response body at https://vimeo.com/api/oembed.%7Bformat%7D?url=https%3A%2F%2Fvimeo.com%2F66520064&#x26;maxwidth=640&#x26;maxheight=480&#x26;format=json reason: Unexpected token &#x3C; in JSON at position 0</code></p>
+<p>Vimeo — не працює, плагін падає тому що не підставляється {format} в URL:</p>
+<pre><code>https://vimeo.com/66520064
+</code></pre>
 <p>DailyMotion:</p>
 <iframe frameborder="0" width="640" height="359" src="https://www.dailymotion.com/embed/video/x82przf" allowfullscreen allow="autoplay"></iframe>
-<p>Flat:</p>
+<p>Flat - деколи не показується:</p>
 <iframe src="https://flat.io/embed/60f5ef4a174e920012435499?maxwidth=640&#x26;maxheight=480" allowfullscreen height="400" width="800" frameborder="0"></iframe>
 <p>Giphy:</p>
 <iframe src="https://giphy.com/embed/8RWa3gQp2WZWsQ8dtr/video" width="270" height="480" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
