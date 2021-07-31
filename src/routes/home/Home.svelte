@@ -15,6 +15,7 @@
     display: grid;
     grid-template-columns: 1fr;
     margin: 3rem 0;
+    align-items: stretch;
   }
 
   @media (min-width: 768px) {

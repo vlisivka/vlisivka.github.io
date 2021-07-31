@@ -3,7 +3,7 @@
     const events = getEventsAction();
 </script>
 
-<div class:card={1} use:events {...$$restProps}>
+<div class:card={1} use:events {...$$restProps} style="height:100%">
 {#if $$slots.header}
   <div>
     <slot name="thumb"></slot>
