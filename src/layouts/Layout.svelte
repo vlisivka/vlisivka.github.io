@@ -1,5 +1,5 @@
 <script>
-  import 'chota';
+//  import 'chota';
   export let templateHtml;
 </script>
 
@@ -35,6 +35,10 @@
     margin-bottom: 0.3rem;
   }
 </style>
+
+<svelte:head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 130 100%22><text y=%22.9em%22 font-size=%2290%22>ВЛ</text></svg>">
+</svelte:head>
 
 <div class="container">
   {@html templateHtml}
