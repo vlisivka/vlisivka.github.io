@@ -3,14 +3,14 @@
     const events = getEventsAction();
 </script>
 
-<div class:card={1} use:events {...$$restProps} style="height:100%">
-{#if $$slots.header}
-  <div>
+<div class:card={1} use:events {...$$restProps}>
+{#if $$slots.thumb}
+  <div style="text-align: center;">
     <slot name="thumb"></slot>
   </div>
 {/if}
-{#if $$slots.thumb}
-  <header>
+{#if $$slots.header}
+  <header style="text-align: center;">
     <slot name="header"></slot>
   </header>
 {/if}
