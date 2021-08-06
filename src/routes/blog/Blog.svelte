@@ -1,7 +1,15 @@
 <script>
+  import SvelteSeo from "svelte-seo";
+  import Time from "svelte-time";
+  import "dayjs/esm/locale/uk";
+  import dayjs from "dayjs/esm";
   import 'highlight.js/styles/github.css';
+
   export let data, request; // data is mainly being populated from the @elderjs/plugin-markdown
   const { html, frontmatter } = data;
+
+  // Set locale for svelte-time
+  dayjs.locale("uk");
 </script>
 
 <style>
@@ -47,16 +55,74 @@
   }
 </style>
 
+<!-- See
+  https://github.com/artiebits/svelte-seo
+  https://developers.google.com/search/docs/advanced/appearance/overview
+  https://developers.google.com/search/docs/data-types/article
+  https://search.google.com/test/rich-results
+  https://ogp.me/
+-->
 <svelte:head>
-  <title>Блог В. Лісівки: {frontmatter.title}</title>
-  <meta name="description" content={frontmatter.excerpt} />
-  <link href={request.permalink} rel="canonical" />
+<meta property="og:locale" content="uk_UA" />
 </svelte:head>
+<SvelteSeo
+  title="Блог Володимира Лісівки: {frontmatter.title}"
+  description={frontmatter.excerpt}
+  canonical="{request.permalink}"
+
+  openGraph={{
+    type: "article",
+    title: "Блог Володимира Лісівки: " + frontmatter.title,
+    description: frontmatter.excerpt,
+    url: "https://vlisivka.github.io" + request.permalink,
+    images: [
+      { url: frontmatter.image, alt: 'Ілюстрація до статті' }
+    ],
+    article: {
+      publishedTime: frontmatter.date,
+      authors: [ frontmatter.author ],
+      //TODO: tags: ["Tag A", "Tag B", "Tag C"],
+    },
+  }}
+
+  twitter={{
+    //TODO: site: "@username",
+    title: "Блог Володимира Лісівки: " + frontmatter.title,
+    description: frontmatter.excerpt,
+    image: frontmatter.image,
+    imageAlt: "Ілюстрація до статті"
+  }}
+
+  jsonLd={{
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://vlisivka.github.io" + request.permalink,
+      },
+      "headline": "Блог Володимира Лісівки: " + frontmatter.title,
+      "image": [ frontmatter.image ],
+      "datePublished": frontmatter.date,
+      "author": {
+        "@type": "Person",
+        "name": frontmatter.author
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Володимир М. Лісівка",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vlisivka.github.io/public/images/thumbs/vlisivka-photo_t.png"
+        }
+      }
+  }}
+/>
+
 <a href="/">&LeftArrow; На головну</a>
 
 <div class="title">
   <h1>{frontmatter.title}</h1>
-  {#if frontmatter.author}<small>Автор: {frontmatter.author}</small>{/if}
+  {#if frontmatter.author}<small>Автор: {frontmatter.author}</small> <br/>{/if}
+  {#if frontmatter.date}<small>Опубліковано: <Time timestamp={frontmatter.date} format="dddd, D MMMM YYYY H:mm Z" /></small> <br/>{/if}
 </div>
 
 {#if html}

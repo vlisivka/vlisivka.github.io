@@ -2,9 +2,10 @@
 title: Тестова сторінка №1
 comments: true
 excerpt: Cторінка для тестування mermaid, gfm, ремарок.
-date: 2021-08-27T16:00:21
+date: 2021-08-27T16:00:21+0300
 author: Володимир М. Лісівка
 thumb: https://placekitten.com/160/120
+image: https://placekitten.com/800/600
 ---
 
 ## Основний синтаксис Markdown
@@ -12,6 +13,8 @@ thumb: https://placekitten.com/160/120
 I just love **bold text**. Italicized text is the _cat's meow_. At the command prompt, type `nano`.
 
 My favorite markdown editor is [ByteMD](https://github.com/bytedance/bytemd).
+
+Редактор з підсвіткою та переглядом: https://bytemd.netlify.app/ .
 
 Список:
 1. First item

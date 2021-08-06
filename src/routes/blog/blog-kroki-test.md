@@ -5,6 +5,7 @@ excerpt: Cторінка для тестування kroki.
 date: 2021-08-30T12:40:20
 author: Володимир М. Лісівка
 thumb: https://placekitten.com/160/120
+image: https://placekitten.com/800/600
 ---
 
 ## Mermaid

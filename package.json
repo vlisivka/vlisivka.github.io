@@ -50,6 +50,7 @@
     "@remark-embedder/transformer-oembed": "^1.0.2",
     "autoprefixer": "^10.3.1",
     "chota": "^0.8.0",
+    "dayjs": "^1.10.6",
     "escape-html": "^1.0.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^6.11.0",
@@ -69,7 +70,9 @@
     "remark-mermaid-dataurl": "^1.0.2",
     "remark-rehype": "^8.1.0",
     "rollup": "^2.55.1",
-    "svelte-chota": "^1.8.6"
+    "svelte-chota": "^1.8.6",
+    "svelte-seo": "^1.2.1",
+    "svelte-time": "^0.4.0"
   },
   "author": "Nick Reese",
   "license": "MIT",

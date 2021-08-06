@@ -1,5 +1,5 @@
 <script>
-//  import 'chota';
+  import 'chota';
   export let templateHtml;
 </script>
 

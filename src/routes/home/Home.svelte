@@ -1,5 +1,6 @@
 <script>
   import BlogTeaser from '../../components/BlogTeaser.svelte';
+  import SvelteSeo from "svelte-seo";
   export let data, helpers;
 </script>
 
@@ -59,11 +60,38 @@
   }
 </style>
 
+<!-- See
+  https://github.com/artiebits/svelte-seo
+  https://developers.google.com/search/docs/advanced/appearance/overview
+  https://developers.google.com/search/docs/data-types/article
+  https://search.google.com/test/rich-results
+  https://ogp.me/
+-->
 <svelte:head>
-  <title>Блог Володимира Лісівки</title>
-  <meta name="description" content="Персональний блог Володимира Лісівки" />
-  <link href="/" rel="canonical" />
+<meta property="og:locale" content="uk_UA" />
 </svelte:head>
+<SvelteSeo
+  title="Блог Володимира Лісівки"
+  description="Персональний блог Володимира Лісівки"
+  keywords="лісівка блог"
+  canonical="/"
+  openGraph={{
+    type:"website",
+    title:"Блог Володимира Лісівки",
+    description:"Персональний блог Володимира Лісівки",
+    url:"https://vlisivka.github.io/",
+    images: [
+      { url: 'https://vlisivka.github.io/public/images/vlisivka-photo.png', alt: 'Фотографія Володимира Лісівки' }
+    ]
+  }}
+  twitter={{
+    //site: "@username",
+    title: "Блог Володимира Лісівки",
+    description: "Персональний блог Володимира Лісівки",
+    image: "https://vlisivka.github.io/public/images/vlisivka-photo.jpg",
+    imageAlt: "Фотографія Володимира Лісівки"
+  }}
+/>
 
 <div class="banner">
   <h1>Блог Володимира Лісівки</h1>

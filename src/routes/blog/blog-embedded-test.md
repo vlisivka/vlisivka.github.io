@@ -2,9 +2,10 @@
 title: Тестова сторінка №2
 comments: true
 excerpt: Cторінка для тестування вбудованих обʼєктів.
-date: 2021-08-28T17:42:39
+date: 2021-08-28T17:42:39+0300
 author: Володимир М. Лісівка
 thumb: https://placekitten.com/160/120
+image: https://placekitten.com/800/600
 ---
 
 ## Вбудовані обʼєкти
