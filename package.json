@@ -67,7 +67,7 @@
     "remark-highlight.js": "^6.0.0",
     "remark-kroki-plugin": "^0.1.1",
     "remark-math": "^4.0.0",
-    "remark-mermaid-dataurl": "^1.0.2",
+    "remark-mermaid-dataurl": "^2.0.4",
     "remark-rehype": "^8.1.0",
     "rollup": "^2.55.1",
     "svelte-chota": "^1.8.6",
